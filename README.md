@@ -1,54 +1,31 @@
-# Astro Starter Kit: Basics
+<h1>Erasmus Blog Platform</h1>
 
-```sh
-npm create astro@latest -- --template basics
-```
+<h2>Description</h2>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+<p>Developed a responsive platform for an Erasmus project, focusing on the front end. The modern, SEO-friendly blog highlights project updates with a clean and accessible design that's optimized for mobile, ensuring enhanced readability.</p>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<h2>Design and Structure</h2>
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+<h2>Landing page</h2>
 
-## 🚀 Project Structure
+![landing-bitl](https://github.com/user-attachments/assets/7e31e1e6-526c-4964-8a91-fda526271fa7)
 
-Inside of your Astro project, you'll see the following folders and files:
+<h2>Menu</h2>
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+![navigation-bitl](https://github.com/user-attachments/assets/0e447edd-d832-4e8f-a9f7-499ed0e0ccbf)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+<h2>Mobile view</h2>
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+![mobile-bitl](https://github.com/user-attachments/assets/ba92fbe1-4862-41b0-860c-0407ec7044bf)
 
-Any static assets, like images, can be placed in the `public/` directory.
+<h2>Activities section</h2>
 
-## 🧞 Commands
+![activities-bitl](https://github.com/user-attachments/assets/f2ceda3b-ae3c-4556-966a-8f09d5d4326a)
 
-All commands are run from the root of the project, from a terminal:
+<h2>Photo gallery</h2>
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+![gallery-bitl](https://github.com/user-attachments/assets/02997e31-6e51-4e81-a575-3af48dad1630)
 
-## 👀 Want to learn more?
+<h2>Video gallery</h2>
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+![video-bitl](https://github.com/user-attachments/assets/2504df20-6482-480b-a620-70a214d479a6)
