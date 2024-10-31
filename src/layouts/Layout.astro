@@ -1,0 +1,61 @@
+---
+import '@/styles/globals.css'
+
+import '@fontsource-variable/mulish'
+import '@fontsource-variable/montserrat'
+
+import { ViewTransitions } from 'astro:transitions'
+
+import Sidebar from '../components/Sidebar'
+import Footer from '../components/Footer.astro'
+
+import { Image } from 'astro:assets'
+import Logo from '../assets/logo.jpg'
+
+interface Props {
+	title: string
+}
+const { title } = Astro.props
+---
+
+<style is:global>
+	.foot-shadow {
+		box-shadow: 0px 0.75px 15px #eeeeee;
+	}
+	.heighty {
+		min-height: calc(100vh - 180px);
+	}
+
+	swiper-container {
+	}
+
+	swiper-slide {
+		@apply relative isolate flex min-h-[85vh] flex-col items-center text-white;
+	}
+</style>
+
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<meta name="description" content="The official BITL Blog." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="scroll-smooth bg-white font-mulish">
+		<Sidebar client:load>
+			<a
+				href="/"
+				class="relative rounded-sm font-mont text-2xl ring-offset-background transition-opacity after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-accentOrange after:transition-all after:duration-300 hover:after:scale-x-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 lg:text-3xl"
+				>BITL <span class="font-semibold text-textBlue">Blog</span></a
+			>
+		</Sidebar>
+		<slot />
+		<Footer />
+	</body>
+</html>

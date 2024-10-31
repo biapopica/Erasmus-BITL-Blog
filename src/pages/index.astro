@@ -1,0 +1,169 @@
+---
+import { Image } from 'astro:assets'
+import euLogo from '../assets/Erasmusfunded.png'
+import RomaniaFlag from '../assets/romania.png'
+import IrlandFlag from '../assets/ireland.png'
+import CroatiaFlag from '../assets/croatia.png'
+import PolandFlag from '../assets/poland.png'
+import TurkeyFalg from '../assets/turkey.png'
+import LTTAPhoto from '../assets/workshop.jpg'
+import LTMPhoto from '../assets/LTM.jpg'
+import virtualPhoto from '../assets/virualMeet.jpg'
+import Logo from '../assets/logo.jpg'
+import Activities from '@/components/Activities.astro'
+
+import Layout from '../layouts/Layout.astro'
+
+import Objectives from '@/components/Objectives.astro'
+
+const flags = [
+	{ flag: RomaniaFlag, country: 'romania' },
+	{ flag: IrlandFlag, country: 'ireland' },
+	{ flag: CroatiaFlag, country: 'croatia' },
+	{ flag: PolandFlag, country: 'poland' },
+	{ flag: TurkeyFalg, country: 'türkiye' }
+]
+---
+
+<style>
+	.line {
+		background-image: radial-gradient(circle, #00bbcc 28%, #ffffff);
+	}
+	.heighty {
+		min-height: calc(100vh - 180px);
+	}
+</style>
+
+<Layout title="BITL Blog | Home">
+	<main
+		class="mx-[5%] my-[125px] flex flex-col items-center justify-center gap-20 sm:mx-[10%] lg:gap-36"
+	>
+		<section class="heighty relative grid grid-cols-1 items-center lg:grid-cols-2 xl:w-[80%]">
+			<div class="flex animate-show-up flex-col items-start justify-center gap-8 opacity-0">
+				<div class="flex flex-col items-start justify-center gap-3">
+					<h1 class="font-mont text-4xl md:text-5xl lg:text-6xl">
+						<span class="font-semibold text-textBlue">Before</span> It's <span
+							class="whitespace-nowrap font-semibold text-textOrange">Too Late</span
+						>
+					</h1>
+					<p class="ml-1 max-w-xs text-sm sm:ml-2 sm:max-w-xl sm:text-base xl:text-lg">
+						This is our <span class="font-bold">only</span> planet, we have no other home. Our world
+						has aged and its <span class="font-bold">burden</span> has become heavier. We don't have
+						time to linger, we have to do <span class="font-bold">something</span>.
+					</p>
+					<p class="ml-1 font-bold sm:ml-2 sm:text-lg">
+						Project number: <span class="font-mont font-semibold text-textBlue sm:font-bold"
+							>2021-1-RO01-KA220-SCH-000032488</span
+						>
+					</p>
+				</div>
+				<a
+					href="#discover"
+					class="ml-1 rounded bg-accentOrange px-4 py-2.5 text-lg font-semibold text-white ring-offset-background transition-all duration-300 hover:bg-orange-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none sm:ml-2 sm:px-5 sm:py-3.5 sm:text-xl lg:text-2xl"
+					>Discover</a
+				>
+			</div>
+			<Image
+				src={Logo}
+				loading="eager"
+				alt="Global Warming Ilustration"
+				class="w-full max-w-[275px] animate-show-up self-start justify-self-center opacity-0 xs:max-w-xs sm:max-w-sm lg:self-auto lg:justify-self-end 2xl:max-w-md"
+			/>
+			<Image
+				class="funded absolute -bottom-[2%] hidden w-64 lg:-left-[10%] lg:block xl:-left-[25%]"
+				src={euLogo}
+				alt="Erasmus funded"
+			/>
+		</section>
+		<!-- <div class="line h-[1.5px] w-full"></div> -->
+		<section id="discover" class="flex flex-col items-center justify-center gap-10 md:gap-16">
+			<h3 class="self-start font-mont text-4xl font-extralight md:text-5xl lg:text-6xl">
+				Partener Countries
+			</h3>
+			<div
+				class="grid w-full grid-cols-1 items-center justify-items-center gap-14 xs:grid-cols-5 sm:gap-16 md:gap-14"
+			>
+				{
+					flags.map((flag) => (
+						<a href={`/${flag.country}`}>
+							<Image
+								src={flag.flag}
+								alt="Flag"
+								class="w-20 rounded-[50%] shadow-lg shadow-neutral-300 transition-all duration-300 hover:scale-110 md:w-24"
+							/>
+						</a>
+					))
+				}
+			</div>
+			<div class="flex w-full flex-col items-start justify-start">
+				<p class="text-lg">
+					Welcome to our collaborative <span class="font-bold text-textBlue">Erasmus+</span>
+					 project, a joint effort driven by partner schools in <span class="font-bold"
+						>Romania</span
+					>, <span class="font-bold">Türkiye</span>, <span class="font-bold">Poland</span>, <span
+						class="font-bold">Croatia</span
+					>, and an <span class="font-bold">Irish NGO</span>. Our project centers on school-based
+					education, focusing on "<span class="whitespace-nowrap font-bold text-textOrange"
+						>Climate Change</span
+					>" and social inclusion. <br /> At the core of our initiative lies a shared commitment: <span
+						class="font-bold"
+						>We delve into understanding the intricate causes and far-reaching impacts of climate
+						change</span
+					>. <br />
+					 By raising <span class="font-bold text-textBlue">awareness</span> among participants, we
+					foster a deep understanding of the urgent need for climate precautions. Our project
+					acknowledges and explores the common social contexts in our diverse regions. Additionally,
+					we emphasize the dissemination of vital climate change information far and wide. Together,
+					we work towards a <span class="whitespace-nowrap font-bold text-textBlue"
+						>sustainable future</span
+					>, promoting knowledge, awareness, and inclusivity.
+				</p>
+			</div>
+		</section>
+		<!-- <div class="line h-[1.5px] w-full"></div> -->
+		<section class="flex w-full flex-col items-start justify-start gap-10 md:gap-16">
+			<Objectives />
+		</section>
+		<section class="flex min-h-screen w-full flex-col justify-center gap-32 lg:gap-52">
+			<Activities
+				photo={LTTAPhoto.src}
+				order="normal"
+				title="LTT Activities"
+				anco="ltt"
+				activity="LTTA"
+				description="LTT activities are the educational components of an Erasmus project, including workshops, seminars, and training sessions. They promote cross-cultural learning and skill development among participants, enhancing their competencies and fostering international cooperation."
+				countries={[
+					{ flag: TurkeyFalg, country: 'türkiye' },
+					{ flag: PolandFlag, country: 'poland' },
+					{ flag: CroatiaFlag, country: 'croatia' },
+					{ flag: RomaniaFlag, country: 'romania' }
+				]}
+			/>
+			<Activities
+				photo={LTMPhoto.src}
+				order="reverse"
+				title="TP Meetings"
+				activity="TPM"
+				anco="tp"
+				description="TP meetings are essential coordination gatherings within an Erasmus project. They bring project partners together to discuss progress, plan future activities, and ensure compliance with program guidelines. TP meetings facilitate effective communication and collaboration among stakeholders, contributing to the project's success."
+				countries={[
+					{ flag: RomaniaFlag, country: 'romania' },
+					{ flag: IrlandFlag, country: 'ireland' },
+					{ flag: PolandFlag, country: 'poland' }
+				]}
+			/>
+			<Activities
+				photo={virtualPhoto.src}
+				order="normal"
+				title="Virtual Meetings"
+				activity="virtual meeting"
+				anco="vm"
+				description="Through video conferencing, presentations, interactive discussions, and shared resources, we connect and work together seamlessly, breaking down geographical barriers to  to propel our project towards successful realization."
+				countries={[
+					{ flag: TurkeyFalg, country: 'türkiye' },
+					{ flag: RomaniaFlag, country: 'romania' }
+				]}
+			/>
+		</section>
+	</main>
+</Layout>

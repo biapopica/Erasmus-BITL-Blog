@@ -1,0 +1,37 @@
+---
+import Objective from './Objective.astro'
+
+import carbonIco from '../assets/carbon-footprint.png'
+import warmingIco from '../assets/global-warming.png'
+import learnIco from '../assets/online-learning.png'
+import comIco from '../assets/talking.png'
+import { Image } from 'astro:assets'
+---
+
+<section class="flex w-full flex-col items-center justify-center gap-10 py-6">
+	<h2 class="self-start font-mont text-4xl font-extralight md:text-5xl lg:text-6xl">
+		Main Objectives
+	</h2>
+	<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+		<Objective
+			title="Helping participants gain valuable insights into the significance of the carbon footprint."
+		>
+			<Image src={carbonIco} alt="BITL Objective" class="w-14 rounded" />
+		</Objective>
+		<Objective
+			title="Assisting participants in gaining valuable insights into the significance of climate change, its impact on our planet, and the urgency of taking action."
+		>
+			<Image src={warmingIco} alt="BITL Objective" class="w-14 rounded" />
+		</Objective>
+		<Objective
+			title="Strengthening intercultural dialogue, which is crucial for fostering understanding, respect, and harmony among diverse communities."
+		>
+			<Image src={comIco} alt="BITL Objective" class="w-14 rounded" />
+		</Objective>
+		<Objective
+			title="Empowering participants to gain valuable insights into new ways of studying, communicating effectively, and fostering personal growth, emphasizing adaptability and lifelong learning."
+		>
+			<Image src={learnIco} alt="BITL Objective" class="w-14 rounded" />
+		</Objective>
+	</div>
+</section>
