@@ -4,6 +4,8 @@
 
 <p>Developed a responsive platform for an Erasmus project, focusing on the front end. The modern, SEO-friendly blog highlights project updates with a clean and accessible design that's optimized for mobile, ensuring enhanced readability.</p>
 
+[Website link](https://erasmus-bitl-blog.netlify.app/)
+
 <h2>Design and Structure</h2>
 
 <h2>Landing page</h2>
